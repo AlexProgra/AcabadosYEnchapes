@@ -1,0 +1,314 @@
+*{
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body{
+  margin: 0 3rem 0 3rem;
+  border-right: 0.2rem #333 solid;
+  border-left: 0.2rem #333 solid;
+  z-index: 1;
+}
+
+header {
+  background-color: #fff;
+  padding: 3rem 1.5rem 1rem 1.5rem;
+  width: 100%;
+  height: 6rem;
+  border-bottom: 0.2rem #333 solid;
+  z-index: 4;
+  box-shadow: 1px 9px 19px 0px rgba(0,0,0,0);
+  box-shadow: 0px 10px 13px -7px #000000;
+  position: fixed;
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 2rem;
+  list-style: none;
+}
+
+header nav ul li a {
+  font-size: 1.1rem;
+  color: #333;
+  text-decoration: none;
+  padding: 1rem 1.6rem;
+  font-family: Georgia, serif;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  font-weight: 700;
+  text-decoration: none;
+  font-style: italic;
+  font-variant: normal;
+  text-transform: none;
+}
+
+header nav ul .li-img a{
+  width: 1rem;
+  padding: 0;
+}
+
+header nav ul .li-img a img {
+  width: 8rem;
+  margin-top: -3rem;
+  border-bottom: 0.2rem #000 solid;
+  border-radius: 0.5rem;
+}
+
+header nav ul li>.menu-services {
+margin-left: 26rem;
+}
+
+header nav ul .li-contact a{
+  transition: 0.3s;
+  border-radius: 0.2rem;
+
+}
+
+header nav ul .li-contact a:hover {
+  border-radius: 0.4rem;
+
+}
+
+.container .section-slider {
+  width: 100%;
+  height: 50rem;
+  background-color: red;
+  padding: 7rem 14rem;
+}
+
+.container .section-slider .section-slider-img {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(34, 33, 33);
+  overflow: hidden;
+  border-radius: 0.4rem;
+  border: 0.2rem solid #000;
+}
+
+.container .section-slider .section-slider-img img {
+  position: relative;
+  width: 100%;
+  height: 36rem;
+}
+
+.container .section-slider .section-slider-img .section-slider-text {
+  background-color: rgba(33, 33, 33, 0.616);
+  width: 55rem;
+  height: 12rem;
+  margin: 15rem 10rem 10rem 15rem;
+  position: absolute;
+  z-index: 3;
+  border-radius: 0.4rem;
+}
+
+.section-slider-text h3, .section-slider-text h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: #fff;
+}
+
+.section-slider-text h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-family: Georgia, serif;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-style: italic;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.section-slider-text h2 {
+  font-size: 3rem;
+  color: rgb(52, 184, 0);
+  -webkit-text-stroke: 1px rgb(20, 70, 0);
+}
+
+.section-slider-img ul {
+  padding: 0;
+  display: flex;
+  width: 400%;
+  animation: cambio 12s infinite alternate-reverse;
+}
+
+.section-slider-img li {
+  list-style: none;
+  width: 100%;
+}
+
+@keyframes cambio {
+  0% {margin-left: 0;}
+  15% {margin-left: 0;}
+
+  25% {margin-left: -100%;}
+  40% {margin-left: -100%;}
+
+  50% {margin-left: -200%;}
+  65% {margin-left: -200%;}
+
+  75% {margin-left: -300%;}
+  100% {margin-left: -300%;}
+}
+
+.section-services {
+  width: 100%;
+  height: 200rem;
+  background-color: salmon;
+  padding-top: 6rem;
+  margin-bottom: 3rem;
+}
+
+.services-title {
+  width: 100%;
+  height: 5rem;
+  justify-content: center;
+  background-color: yellowgreen;
+  font-family: arial;
+  padding-top: 2rem;
+  margin-bottom: 5rem;
+}
+
+.services-title h1 {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.banner-navigation {
+  width: 25em;
+  height: 30rem;
+  background-color: violet;
+  float: left;
+}
+
+.services {
+  width: 70%;
+  height: 90%;
+  background-color: chocolate;
+  float: right;
+  margin-right: 2.5rem;
+  margin-top: 4rem;
+}
+
+.section-services-obra-blanca, .section-services-enchape, .section-services-pintar, .section-services-electricista, .section-services-gas, .section-services-todero {
+  width: 100%;
+  height: 15%;
+  background-color: #000;
+  margin-bottom: 4rem;
+  padding: 3rem 2rem;
+}
+
+.section-services-obra-blanca-text, .section-services-enchape-text, .section-services-electricista-text, .section-services-pintar-text, .section-services-gas-text, .section-services-todero-text {
+  width: 100%;
+  height: 20%;
+  background-color: #fff;
+}
+
+.section-services-obra-blanca-img, .section-services-enchape-img, .section-services-electricista-img, .section-services-pintar-img, .section-services-gas-img, .section-services-todero-img {
+  width: 100%;
+  height: 60%;
+  background-color: aqua;
+  margin-top: 2rem;
+  display: flex;
+}
+
+.section-services-obra-blanca-img1, .section-services-obra-blanca-img2, .section-services-obra-blanca-img3, .section-services-enchape-img1, .section-services-enchape-img2, .section-services-enchape-img3, .section-services-pintar-img1, .section-services-pintar-img2, .section-services-pintar-img3, .section-services-electricista-img1, .section-services-electricista-img2, .section-services-electricista-img3, .section-services-gas-img1, .section-services-gas-img2, .section-services-gas-img3, .section-services-todero-img1, .section-services-todero-img2, .section-services-todero-img3{
+  width: 32%;
+  height: 100%;
+  background-color: yellow;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.line-serv-cont {
+  width: 80%;
+  height: 0.2rem;
+  margin: 0 auto;
+  background-color: turquoise;
+}
+
+.section-contact {
+  margin-top: 3rem;
+  width: 100%;
+  height: 25rem;
+  padding: 4rem 2rem;
+  background-color: crimson;
+}
+
+.section-contact-title{
+  width: 30%;
+  height: 40%;
+  margin: 0 auto;
+  background-color: aqua;
+  text-align: center;
+  padding: 3rem;
+}
+
+.section-contact-title h2 {
+  font-size: 1.1rem;
+  font-weight: 1000;
+}
+
+.section-contact-social-networks {
+  width: 100%;
+  height: 60%;
+  margin: 0 auto;
+  background-color: yellowgreen;
+  padding: 3rem 1rem 3rem 3rem;
+  display: flex;
+}
+
+.section-contact-social-networks-facebook, .section-contact-social-networks-gmail, .section-contact-social-networks-instagram, .section-contact-social-networks-whatsapp {
+  width: 23%;
+  height: 4rem; 
+  background-color: violet;
+  margin-right: 2rem;
+}
+
+.line-cont-emer {
+  width: 80%;
+  height: 0.2rem;
+  margin: 0 auto;
+  background-color: turquoise;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.section-emergency {
+  width: 100%;
+  height: 18rem;
+  background-color: salmon;
+  padding-top: 4rem;
+}
+
+.section-emergency-content {
+  width: 50%;
+  height: 10rem;
+  background-color: #000;
+  margin: 0 auto;
+}
+
+.section-emergency-content-button {
+  width: 100%;
+  height: 55%;
+  background-color: yellowgreen;
+}
+
+.section-emergency-content-button1 {
+  width: 100%;
+  height: 45%;
+  background-color: tomato;
+}
