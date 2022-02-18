@@ -20,19 +20,26 @@ header {
   padding: 3rem 1.5rem 1rem 1.5rem;
   width: 100%;
   height: 6rem;
-  position: relative;
-  border-bottom: 0.1rem rgb(255, 115, 0) solid;
   box-shadow: 1px 9px 19px 0px rgb(255, 115, 0);
   box-shadow: 0px 10px 13px -10px rgb(255, 115, 0);
+  transition: all 0.7s;
+  z-index: 10;
+  position: relative;
+}
+
+header nav {
+  transition: all 0.5s;
 }
 
 header nav ul {
   display: flex;
+  transition: all 0.5s;
 }
 
 header nav ul li {
   margin-left: 2rem;
   list-style: none;
+  transition: all 0.5s;
 }
 
 header nav ul li a {
@@ -49,20 +56,18 @@ header nav ul li a {
   font-style: italic;
   font-variant: normal;
   text-transform: none;
+  transition: all 0.5s;
 }
 
-header nav ul .li-img a{
-  width: 1rem;
-  padding: 0;
-}
+
 
 header nav ul .li-img a img {
   width: 8rem;
   margin-top: -3rem;
-  border-bottom: 0.1rem rgb(255, 115, 0) solid;
   border-radius: 0.5rem;
   box-shadow: 1px 9px 0px 0px rgb(255, 115, 0);
   box-shadow: 0px 10px 13px -12px rgb(255, 115, 0);
+  transition: all 0.5s;
 }
 
 header nav ul li>.menu-services {
@@ -77,7 +82,17 @@ header nav ul .li-contact a{
 
 header nav ul .li-contact a:hover {
   border-radius: 0.4rem;
+}
 
+.fijar-header {
+  
+  position: fixed;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  height: 4rem;
+}
+
+.fijar-header .img {
+  transform: scale(0.8);
 }
 
 .container .section-slider {
@@ -170,7 +185,6 @@ header nav ul .li-contact a:hover {
   width: 100%;
   height: 5rem;
   justify-content: center;
-  margin: 0 0 2rem 14rem;
 }
 
 .services-title h1 {
@@ -179,20 +193,26 @@ header nav ul .li-contact a:hover {
   font-size: 3rem;
   color: rgb(16, 49, 9);
   font-style: italic;
+  margin: 0 0 0rem 28.5rem;
 }
 
 .banner-navigation {
-  width: 23em;
+  width: 25rem;
   height: 30rem;
   float: left;
+  transition: all 0.3s;
   opacity: 0;
-  transition: all 0.5s;
   position: fixed;
   margin-top: -60rem;
+  transform: translateX(-260px);
+}
+
+.posicionar-banner {
+  transform: translateX(0);
 }
 
 .mostrar-banner {
-  animation: mostrar-banner 0.4s;
+  animation: mostrar-banner 0.3s;
 }
 
 @keyframes mostrar-banner{
@@ -200,21 +220,17 @@ header nav ul .li-contact a:hover {
     transform: translateX(-60px);
   }
   100% {
-    transform: translateX(0);
-  }
-}
-
-.hide-banner {
-  animation: hide-banner 0.5s;
-}
-
-@keyframes hide-banner {
-  0% {
     transform: translateX(0px);
   }
-  100% {
-    transform: translateX(-60);
-  }
+}
+
+.botoon-navigation {
+  transition: all 0.2s;
+}
+
+.botoon-navigation:hover {
+  width: 110%;
+  padding-left: 2rem;
 }
 
 .navigation-obra-blanca, .navigation-enchape, .navigation-pintar, .navigation-electricista, .navigation-gas, .navigation-todero {
@@ -278,14 +294,14 @@ header nav ul .li-contact a:hover {
   text-align: center;
 }
 
-.section-services-obra-blanca-img, .section-services-enchape-img, .section-services-electricista-img, .section-services-pintar-img, .section-services-gas-img, .section-services-todero-img {
+.services-img {
   width: 100%;
   height: 60%;
   margin-top: 2rem;
   display: flex;
 }
 
-.section-services-obra-blanca-img1, .section-services-obra-blanca-img2, .section-services-obra-blanca-img3, .section-services-enchape-img1, .section-services-enchape-img2, .section-services-enchape-img3, .section-services-pintar-img1, .section-services-pintar-img2, .section-services-pintar-img3, .section-services-electricista-img1, .section-services-electricista-img2, .section-services-electricista-img3, .section-services-gas-img1, .section-services-gas-img2, .section-services-gas-img3, .section-services-todero-img1, .section-services-todero-img2, .section-services-todero-img3{
+.serv-img{
   width: 32%;
   height: 100%;
   border-radius: 0.4rem;
@@ -302,41 +318,98 @@ header nav ul .li-contact a:hover {
 }
 
 .section-contact {
-  margin-top: 3rem;
+  margin-top: 8rem;
   width: 100%;
   height: 25rem;
   padding: 4rem 2rem;
-  background-color: crimson;
 }
 
 .section-contact-title{
   width: 30%;
   height: 40%;
   margin: 0 auto;
-  background-color: aqua;
   text-align: center;
   padding: 3rem;
+  border-radius: 0.4rem;
 }
 
 .section-contact-title h2 {
-  font-size: 1.1rem;
-  font-weight: 1000;
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+
 }
 
 .section-contact-social-networks {
   width: 100%;
   height: 60%;
   margin: 0 auto;
-  background-color: yellowgreen;
   padding: 3rem 1rem 3rem 3rem;
   display: flex;
+  border: 0.2rem rgb(255, 115, 0) solid;
+  margin-top: 2rem;
 }
 
-.section-contact-social-networks-facebook, .section-contact-social-networks-gmail, .section-contact-social-networks-instagram, .section-contact-social-networks-whatsapp {
-  width: 23%;
-  height: 4rem; 
-  background-color: violet;
-  margin-right: 2rem;
+.contact-a {
+  width: 25%;
+  height: 100%;
+  text-decoration: none;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+.section-contact-social {
+  width: 100%;
+  height: 100%; 
+  border-radius: 0.4rem;
+  display: flex;
+  overflow: visible;
+}
+
+.contact-img {
+  width: 27%;
+  height: 100%;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+.contact-img img {
+  width: 70%;
+  margin-left: 0.7rem;
+}
+
+.section-contact-social-networks-facebook-img {
+  background-color: rgb(0, 14, 212);
+  box-shadow: 5px 5px 9px -2px rgba(0,0,0,0.33);
+}
+
+.section-contact-social-networks-gmail-img {
+  background-color: rgb(184, 3, 3);
+  box-shadow: 5px 5px 9px -2px rgba(0,0,0,0.33);
+}
+
+.section-contact-social-networks-instagram-img {
+  background-color: rgb(221, 6, 167);
+  box-shadow: 5px 5px 9px -2px rgba(0,0,0,0.33);
+}
+
+.section-contact-social-networks-whatsapp-img {
+  background-color: rgb(0, 216, 0);
+  box-shadow: 5px 5px 9px -2px rgba(0,0,0,0.33);
+}
+
+.contact-text {
+  width: 80%;
+  height: 100%;
+  padding: 1rem;
+  overflow: visible;
+}
+
+.contact-text h3 {
+  font-size: 1.6rem;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
 }
 
 .line-cont-emer, .line-head-serv {
@@ -344,32 +417,50 @@ header nav ul .li-contact a:hover {
   height: 0.2rem;
   margin: 0 auto;
   background-color: turquoise;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
 }
 
 .section-emergency {
   width: 100%;
   height: 18rem;
-  background-color: salmon;
   padding-top: 4rem;
 }
 
 .section-emergency-content {
   width: 50%;
   height: 10rem;
-  background-color: #000;
   margin: 0 auto;
 }
 
 .section-emergency-content-button {
   width: 100%;
-  height: 55%;
-  background-color: yellowgreen;
+  height: 65%;
+  background-color: rgb(39, 117, 44);
+  border-radius: 0.4rem;
+  padding: 1.8rem;
+}
+
+.section-emergency-content-button h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 .section-emergency-content-button1 {
   width: 100%;
-  height: 45%;
-  background-color: tomato;
+  height: 35%;
+  border-radius: 0.4rem;
+  padding: 1rem;
+}
+
+.section-emergency-content-button1 h2 {
+  text-align: center;
+  font-size: 1.3rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.section-emergency a {
+  text-decoration: none;
+  color: #000;
 }

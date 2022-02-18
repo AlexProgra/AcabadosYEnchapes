@@ -1,15 +1,3 @@
-// $(document).ready(function(){
-//     var altura = $('.banner-navigation').offset().top;
-    
-//     $(window).on('scroll', function(){
-//         if ( $(window).scrollTop() > altura ) {
-//             $('.banner-navigation').addClass('fijar-banner');
-//         } else {
-//             $('.banner-navigation').removeClass('fijar-banner');
-//         }
-//     })
-// });
-
 let animado = document.querySelectorAll(".banner-navigation");
 let altura = document.querySelectorAll(".section-services");
 
@@ -18,11 +6,13 @@ function mostrarScroll() {
 
     for (var i = 0; i < altura.length; i++) {
         let alturaAnimado = altura[i].offsetTop;
-        if(alturaAnimado -100 < scrollTop && alturaAnimado +1600 > scrollTop) {
+        if(alturaAnimado -160 < scrollTop && alturaAnimado +1700 > scrollTop) {
             animado[i].style.opacity = 1;
             animado[i].classList.add("mostrar-banner");
+            animado[i].classList.add("posicionar-banner");
         }else {
             animado[i].style.opacity = 0;
+            animado[i].classList.remove("posicionar-banner");
         }
     }
 }
